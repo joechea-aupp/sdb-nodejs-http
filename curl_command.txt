@@ -1,0 +1,15 @@
+# get http request port 81
+curl -X GET http://localhost:81
+curl -X GET http://localhost:81\?username\=joe\&password\=1234
+
+# post http request port 81
+curl -X POST http://localhost:81
+
+# send post request with data to port 81
+curl -X POST http://localhost:81 -H "Content-Type: applicantion/json" -d '{"username":"jack","password":"1234"}'
+
+# send put request with data to update
+curl -X PUT http://localhost:81 -H "Content-Type: applicantion/json" -d '{"username":"smith","password":"3322"}'
+
+# send delete request to delete
+curl -X DELETE http://localhost:81 -H "Content-Type: applicantion/json" -d '{"username":"smith","password":"3322"}'
